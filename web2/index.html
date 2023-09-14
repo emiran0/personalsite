@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Kanit:wght@600;700;800;900&family=Orbitron:wght@800;900&family=Rubik+Iso&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMIRHAN KARTAL</title>
+</head>
+<body>
+
+    <!-----------------Navbar--------------->
+
+
+
+
+    <!------------Column Menu--------------->
+
+    <div class="colmmenu">
+
+
+        <div class="allw">
+
+            <h1 class="name">
+                EMIRHAN <br> KARTAL
+            </h1>
+            
+        </div>
+        
+
+        <!-- <div class="personal">
+            
+            <div class="contacts">
+                <a href="">Linkedin</a>
+                <a href="">E-mail</a>
+                <a href="">Phone</a>
+                <a href="">GitHub</a>
+            </div>
+
+        </div>
+         -->
+
+        <div class="scrolling-text-container scrolling-text-container1">
+
+            <a href="./aboutme.html" class="scrolling-text-anchor">
+                <span class="scrolling-text">
+                    + ABOUT ME + ABOUT ME&nbsp;
+                </span>
+            </a>
+            
+        </div>
+        <div class="scrolling-text-container scrolling-text-container2">
+
+            <a href="./experiences.html" class="scrolling-text-anchor">
+                <span class="scrolling-text">
+                    EXPERIENCES + EXPERIENCES + &nbsp; 
+                </span>
+            </a>
+            
+        </div>
+        <div class="scrolling-text-container scrolling-text-container3">
+
+            <a href="./skills.html" class="scrolling-text-anchor">
+                <span class="scrolling-text">
+                    &nbsp;SKILLS + SKILLS +
+                </span>
+            </a>
+            
+        </div>
+        <div class="scrolling-text-container scrolling-text-container4">
+
+            <a href="./projects.html" class="scrolling-text-anchor">
+                <span class="scrolling-text">
+                   + PROJECTS + PROJECTS&nbsp;
+                </span>
+            </a>
+            
+        </div>
+        <!-- <div class="line"></div>
+        <div class="line line2"></div> -->
+        
+    </div>
+        
+    
+</body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const textNodes = document.querySelectorAll(".scrolling-text"); // This selects all the scrolling-text elements
+    textNodes.forEach(textNode => {
+        const clonedNode = textNode.cloneNode(true);
+        textNode.parentNode.insertBefore(clonedNode, textNode);
+    });
+});
+
+</script>
+</html>
