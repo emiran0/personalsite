@@ -33,6 +33,22 @@
     text-align: left;
     letter-spacing: 0.7vw;
 }
+.allw .linksto{
+    display: flex;
+    position: absolute;
+    width: 14vw;
+    height: 30vh;
+    left: 0;
+    top: 50vh;
+    justify-content: space-around;
+    align-items: center;
+}
+.linksto .contactlogo{
+    position: relative;
+    color: #111111;
+    width: 20%;
+    height: 70%;
+}
 
 /* .personal{
     display: flex;
