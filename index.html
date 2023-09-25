@@ -28,26 +28,22 @@
             </h1>
 
             <div class="linksto">
-                <div class="contactlogo linkedin"></div>
-                <div class="contactlogo github"></div>
-                <div class="contactlogo email"></div>
-                <div class="contactlogo cvlink"></div>
+                <a href="emirhankrtll@gmail.com" target="_blank" rel="noopener noreferrer" class="contactlogo maillink">
+                    <img src="images/maillogo.png" alt="">
+                </a>
+                <a href="https://www.linkedin.com/in/emirhankartal0/" target="_blank" rel="noopener noreferrer" class="contactlogo linlink">
+                    <img src="images/linkedinlogo.png" alt="">
+                </a>
+                <a href="https://github.com/emiran0" target="_blank" rel="noopener noreferrer" class="contactlogo gitlink">
+                    <img src="images/gitlogo.png" alt="">
+                </a>
+                <a href="https://drive.google.com/file/d/12bIkP2kHlBXckJe8W4bPTdMD5zvGmpqO/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="contactlogo cvlink">
+                    <img src="images/cvlogo.png" alt="">
+                </a>
             </div>
             
         </div>
         
-
-        <!-- <div class="personal">
-            
-            <div class="contacts">
-                <a href="">Linkedin</a>
-                <a href="">E-mail</a>
-                <a href="">Phone</a>
-                <a href="">GitHub</a>
-            </div>
-
-        </div>
-         -->
 
         <div class="scrolling-text-container scrolling-text-container1">
 
@@ -103,4 +99,28 @@
 });
 
 </script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Get all anchor tags with the class 'copy-href'
+        const anchors = document.querySelectorAll("a.maillink");
+
+        anchors.forEach(anchor => {
+            anchor.addEventListener("click", function(event) {
+                // Prevent the default anchor click action (i.e., navigation)
+                event.preventDefault();
+
+                // Use the Clipboard API to copy the href attribute to the clipboard
+                navigator.clipboard.writeText(event.currentTarget.href)
+                    .then(() => {
+                        console.log('Href copied to clipboard!');
+                    })
+                    .catch(err => {
+                        console.error('Failed to copy href: ', err);
+                    });
+            });
+        });
+    });
+</script>
+
+
 </html>
