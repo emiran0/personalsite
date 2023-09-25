@@ -49,8 +49,21 @@
     position: relative;
     height: 15%;
 }
-
-
+.copy-feedback {
+    display: none;
+    font-family: 'Orbitron';
+    position: absolute;
+    background-color: #000000;
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    color: #ffffff;
+    z-index: 1000;
+    margin-top: 5px;
+    white-space: nowrap;
+    text-decoration: none;
+}
 
 /* .personal{
     display: flex;

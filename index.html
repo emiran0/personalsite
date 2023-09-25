@@ -17,7 +17,8 @@
 
 
     <!------------Column Menu--------------->
-
+    <span class="copy-feedback">Copied!</span> 
+    
     <div class="colmmenu">
 
 
@@ -31,6 +32,7 @@
                 <a href="emirhankrtll@gmail.com" target="_blank" rel="noopener noreferrer" class="contactlogo maillink">
                     <img src="images/maillogo.png" alt="">
                 </a>
+                
                 <a href="https://www.linkedin.com/in/emirhankartal0/" target="_blank" rel="noopener noreferrer" class="contactlogo linlink">
                     <img src="images/linkedinlogo.png" alt="">
                 </a>
@@ -99,20 +101,35 @@
 });
 
 </script>
+
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         // Get all anchor tags with the class 'copy-href'
         const anchors = document.querySelectorAll("a.maillink");
+        const feedback = document.querySelector(".copy-feedback");
 
         anchors.forEach(anchor => {
             anchor.addEventListener("click", function(event) {
                 // Prevent the default anchor click action (i.e., navigation)
                 event.preventDefault();
 
+                // Get the href attribute value directly
+                const hrefValue = event.currentTarget.getAttribute('href');
+
                 // Use the Clipboard API to copy the href attribute to the clipboard
-                navigator.clipboard.writeText(event.currentTarget.href)
+                navigator.clipboard.writeText(hrefValue)
                     .then(() => {
                         console.log('Href copied to clipboard!');
+
+                        // Show feedback to the user
+                        feedback.style.display = "inline";
+                        feedback.style.left = `${anchor.getBoundingClientRect().left}px`;
+                        feedback.style.top = `${anchor.getBoundingClientRect().bottom + window.scrollY}px`;
+
+                        // Hide the feedback after 2 seconds
+                        setTimeout(() => {
+                            feedback.style.display = "none";
+                        }, 2000);
                     })
                     .catch(err => {
                         console.error('Failed to copy href: ', err);
@@ -121,6 +138,5 @@
         });
     });
 </script>
-
 
 </html>
