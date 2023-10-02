@@ -409,16 +409,53 @@ width: 100%;
 .shelldesc p{
     font-size: 1.5vh;
     font-family: 'Orbitron';
-    color: #ffffff;
     text-align: left;
     padding: 4vh 0 0 0;
+
+    position: relative;
+    color: transparent;
+
+    animation: showText forwards;
+    animation-delay: 600ms;
 }
+.reveal-bg {
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #000000;
+    left: 0;
+    top: 3vh;
+  
+    animation: revealText 1200ms ease-out;
+  }
+  @keyframes revealText {
+    60% {
+      width: 100%;
+      left: 0;
+    }
+  
+    100% {
+      width: 0%;
+      left: 100%;
+    }
+  }
+  
+  @keyframes showText {
+    to {
+      color: #ffffff;
+    }
+  }
 .turkdesc p{
     font-size: 1.5vh;
     font-family: 'Orbitron';
-    color: #ffffff;
     text-align: left;
     padding: 4vh 0 0 0;
+
+    position: relative;
+    color: transparent;
+
+    animation: showText forwards;
+    animation-delay: 600ms;
 }
 .backgsk{
     display: flex;
